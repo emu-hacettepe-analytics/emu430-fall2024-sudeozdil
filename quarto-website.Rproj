@@ -11,3 +11,5 @@ Encoding: UTF-8
 
 RnwWeave: Sweave
 LaTeX: pdfLaTeX
+
+ProjectName: https://emu-hacettepe-analytics.github.io/emu430-fall2024-sudeozdil/

@@ -1,15 +1,80 @@
+```{r}
+
+```
+
 ---
 title: "Assignment 1"
 ---
 
 # Assignment 1
 
-```{r}
-1 + 1
-```
-
-My first assignment has two parts.
+My assignment has two parts.
 
 ## (a)
 
+The video I chose: Conversations on Data Science and Industrial Engineering - Mustafa Baydoğan & Erdi Daşdemir.With this video, I understood better in which areas I can use data science and how I can reconcile it with industrial engineering. Our common goal is to increase profits or eliminate potential losses with the data companies provide us. For example, an e-commerce company's click and view data allows potential products that customers are likely to buy to be ranked higher in the application. Or, in the electricity production and distribution process, we use data science to make recommendations to companies such as how much electricity you should produce for certain dates by using data on how much electricity the consumer consumes on certain dates and hours. In short, we can use it in everything that is part of daily life.
+
 ## (b)
+
+STEP1
+
+I import the "polls_us_election_2016" data set from the dslabs package.
+
+```{r}
+library(dslabs)
+data("polls_us_election_2016")
+```
+
+STEP2
+
+I used head function for display the first 10 rows of the data set on my web page.
+
+```{r}
+head(polls_us_election_2016,10)
+
+```
+
+STEP3
+
+I calculated and displayed the total number of NA values in the entire data set.
+
+```{r}
+total_number_of_na_in_data_set <- sum(is.na(polls_us_election_2016))
+print(total_number_of_na_in_data_set)
+
+
+```
+
+STEP4
+
+I replaced all NA values in the “polls_us_election_2016” data set as follows: For numeric columns, replace NA values with your my birth year 2003. For character or factor columns, replace NA values with your my first name Zeynep. I stored the modified data set as a new object.
+
+```{r}
+birth_year <- 2003
+first_name <- "zeynep"
+
+funtion_with_my_information <- function(x) { if(is.numeric(x)) { return(ifelse(is.na(x), birth_year,x))} else{return(ifelse(is.na(x), first_name,x))}}
+polls_us_election_2016 <- as.data.frame(lapply(polls_us_election_2016,funtion_with_my_information))
+my_new_data <- polls_us_election_2016
+total_numer_of_na_after_modify <- sum(is.na(my_new_data))
+print( total_numer_of_na_after_modify)
+```
+
+STEP5
+
+As a last step, I used head function again for print the first 10 rows of the new data frame and the total number NAs remaining in the new data frame. As you can see, in my last data frame number of NAs are 0 because at STEP4 I changed NA values with my birth year and my first name.
+
+```{r}
+head(my_new_data,10)
+```
+
+```         
+```
+
+```{r}
+print(my_new_data,10)
+```
+
+## 
+
+## 

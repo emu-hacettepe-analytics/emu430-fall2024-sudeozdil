@@ -5,26 +5,34 @@ sidebar: false
 
 # Education
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - ongoing.
 
 # Work Experience
 
 ## Employements
 
-1.  Firm xxx, position xx, year xxx
-
-2.  Firm yyy, position yyy, year yyy
-
-## Internships
-
-1.  Firm aaa, position xx, year xxx
-
-2.  Firm bbb, position yyy, year yyy
-
-# Projects
+Work and Travel
 
 # Competencies
 
-R, Quarto, Git, Python
+R, Quarto, Git, Python, Excel, AutoCAD, Solidwork
 
 # Hobbies
+
+basketball
+
+traveling
+
+reading book
+
+exploring new tastes
+
+Here is my CV;
+
+```{r}
+library(pdftools)
+pdf_path <- "C:/Users/Zeynep Sude/Desktop/CV.pdf"
+
+pdf_text_content <- pdf_text(pdf_path)
+print(pdf_text_content)
+```
